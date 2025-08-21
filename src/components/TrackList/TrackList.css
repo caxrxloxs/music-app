@@ -1,0 +1,19 @@
+.track-list {
+  padding: 1rem 0;
+}
+
+.track-list-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: #ffffff;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .track-list-title {
+    font-size: 1.25rem;
+    margin: 0 0 0.75rem 0;
+  }
+}
