@@ -1,7 +1,13 @@
 import { useState, useEffect } from 'react';
 import './Player.css';
 
-const Player = ({ currentTrack, isPlaying, onPlayPause, onNext, onPrevious }) => {
+const Player = ({
+  currentTrack,
+  isPlaying,
+  onPlayPause,
+  onNext,
+  onPrevious,
+}) => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -19,7 +25,11 @@ const Player = ({ currentTrack, isPlaying, onPlayPause, onNext, onPrevious }) =>
   return (
     <div className="player">
       <div className="track-display">
-        <img src={currentTrack.cover} alt={currentTrack.title} className="current-track-cover" />
+        <img
+          src={currentTrack.cover}
+          alt={currentTrack.title}
+          className="current-track-cover"
+        />
         <div className="track-details">
           <h3 className="current-track-title">{currentTrack.title}</h3>
           <p className="current-track-artist">{currentTrack.artist}</p>

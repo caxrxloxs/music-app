@@ -2,7 +2,7 @@ import './TrackItem.css';
 
 const TrackItem = ({ track, isActive, onSelect }) => {
   return (
-    <div 
+    <div
       className={`track-item ${isActive ? 'active' : ''}`}
       onClick={() => onSelect(track)}
     >

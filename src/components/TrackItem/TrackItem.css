@@ -18,7 +18,11 @@
 }
 
 .track-item.active {
-  background: linear-gradient(135deg, rgba(100, 108, 255, 0.2) 0%, rgba(117, 81, 255, 0.2) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(100, 108, 255, 0.2) 0%,
+    rgba(117, 81, 255, 0.2) 100%
+  );
   border: 1px solid rgba(100, 108, 255, 0.3);
 }
 
@@ -68,21 +72,21 @@
     padding: 10px 12px;
     margin: 6px 0;
   }
-  
+
   .track-cover {
     width: 40px;
     height: 40px;
     margin-right: 12px;
   }
-  
+
   .track-title {
     font-size: 0.9rem;
   }
-  
+
   .track-artist {
     font-size: 0.8rem;
   }
-  
+
   .track-duration {
     font-size: 0.8rem;
     margin-left: 12px;
@@ -91,9 +95,15 @@
 
 /* Animation for active state */
 @keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.02); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .track-item.active {

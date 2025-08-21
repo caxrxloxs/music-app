@@ -19,13 +19,17 @@ function App() {
   };
 
   const handleNext = () => {
-    const currentIndex = trackData.findIndex(track => track.id === currentTrack.id);
+    const currentIndex = trackData.findIndex(
+      (track) => track.id === currentTrack.id
+    );
     const nextIndex = (currentIndex + 1) % trackData.length;
     setCurrentTrack(trackData[nextIndex]);
   };
 
   const handlePrevious = () => {
-    const currentIndex = trackData.findIndex(track => track.id === currentTrack.id);
+    const currentIndex = trackData.findIndex(
+      (track) => track.id === currentTrack.id
+    );
     const prevIndex = (currentIndex - 1 + trackData.length) % trackData.length;
     setCurrentTrack(trackData[prevIndex]);
   };
@@ -48,14 +52,14 @@ function App() {
           </div>
           <FollowButton />
         </div>
-        <TrackList 
-          tracks={trackData} 
+        <TrackList
+          tracks={trackData}
           currentTrack={currentTrack}
           onSelectTrack={handleSelectTrack}
         />
       </div>
       <div className="main-content">
-        <Player 
+        <Player
           currentTrack={currentTrack}
           isPlaying={isPlaying}
           onPlayPause={handlePlayPause}

@@ -5,7 +5,7 @@ const FollowButton = () => {
   const [isFollowing, setIsFollowing] = useState(false);
 
   return (
-    <button 
+    <button
       className={`follow-btn ${isFollowing ? 'following' : ''}`}
       onClick={() => setIsFollowing(!isFollowing)}
     >

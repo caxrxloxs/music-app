@@ -72,7 +72,8 @@
   gap: 1rem;
 }
 
-.control-btn, .play-pause-btn {
+.control-btn,
+.play-pause-btn {
   background: none;
   border: none;
   color: rgba(255, 255, 255, 0.8);
@@ -85,12 +86,14 @@
   justify-content: center;
 }
 
-.control-btn:hover, .play-pause-btn:hover {
+.control-btn:hover,
+.play-pause-btn:hover {
   background: rgba(255, 255, 255, 0.1);
   color: #ffffff;
 }
 
-.control-btn svg, .play-pause-btn svg {
+.control-btn svg,
+.play-pause-btn svg {
   width: 24px;
   height: 24px;
   fill: currentColor;
@@ -113,26 +116,27 @@
     padding: 1.5rem;
     gap: 1rem;
   }
-  
+
   .current-track-cover {
     width: 60px;
     height: 60px;
   }
-  
+
   .current-track-title {
     font-size: 1.1rem;
   }
-  
+
   .current-track-artist {
     font-size: 0.9rem;
   }
-  
+
   .play-pause-btn {
     width: 45px;
     height: 45px;
   }
-  
-  .control-btn svg, .play-pause-btn svg {
+
+  .control-btn svg,
+  .play-pause-btn svg {
     width: 20px;
     height: 20px;
   }
