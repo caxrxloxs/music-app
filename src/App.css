@@ -5,13 +5,7 @@
 }
 
 body {
-  font-family:
-    'Inter',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
   color: #fff;
   min-height: 100vh;
@@ -20,11 +14,15 @@ body {
 
 .app {
   display: flex;
-  min-height: 100vh;
+  min-height: 85vh;
+  height: 100%;
+  width: 100%;
+   flex: 1;
 }
 
 .sidebar {
   width: 350px;
+  min-width: 350px;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   padding: 24px;
@@ -32,14 +30,136 @@ body {
   overflow-y: auto;
 }
 
+
 .main-content {
   flex: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 24px;
+  width: 100%;
+  min-width: 0;
+  min-height: 85vh;
 }
 
+
+
+/* ✅ REPRODUCTOR A ANCHO COMPLETO */
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ✅ DISPLAY DEL TRACK */
+.track-display {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.current-track-cover {
+  width: 140px;
+  height: 140px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.track-details {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+}
+
+.current-track-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: #ffffff;
+}
+
+.current-track-artist {
+  font-size: 1.1rem;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ✅ BARRA DE PROGRESO */
+.progress-container {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #646cff, #747bff);
+  border-radius: 3px;
+  transition: width 0.1s linear;
+}
+
+/* ✅ CONTROLES */
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.control-btn, .play-pause-btn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control-btn:hover, .play-pause-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.control-btn svg, .play-pause-btn svg {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+}
+
+.play-pause-btn {
+  background: linear-gradient(135deg, #646cff, #747bff);
+  color: white;
+  width: 60px;
+  height: 60px;
+  border: none;
+}
+
+.play-pause-btn:hover {
+  background: linear-gradient(135deg, #747bff, #848bff);
+  transform: scale(1.1);
+}
+
+/* ✅ PROFILE */
 .profile {
   text-align: center;
   margin-bottom: 32px;
@@ -52,7 +172,6 @@ body {
   object-fit: cover;
   margin-bottom: 16px;
   border: 3px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .profile-name {
@@ -82,11 +201,10 @@ body {
 
 .stat-label {
   font-size: 0.8rem;
-  opacity: 0.7;
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* Responsive design */
+/* ✅ RESPONSIVE */
 @media (max-width: 768px) {
   .app {
     flex-direction: column;
@@ -103,39 +221,30 @@ body {
     padding: 16px;
   }
 
-  .profile-pic {
-    width: 80px;
-    height: 80px;
+  .player {
+    padding: 1.5rem;
   }
-
-  .profile-name {
-    font-size: 1.25rem;
+  
+  .current-track-cover {
+    width: 100px;
+    height: 100px;
   }
-
-  .profile-stats {
-    gap: 16px;
-  }
-
-  .stat-number {
-    font-size: 1.1rem;
+  
+  .player-controls {
+    gap: 1.5rem;
   }
 }
 
-/* Scrollbar styling */
+/* ✅ SCROLLBAR */
 ::-webkit-scrollbar {
   width: 6px;
 }
 
 ::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.3);
 }

@@ -59,6 +59,8 @@ function App() {
         />
       </div>
       <div className="main-content">
+
+
         <Player
           currentTrack={currentTrack}
           isPlaying={isPlaying}
@@ -66,6 +68,7 @@ function App() {
           onNext={handleNext}
           onPrevious={handlePrevious}
         />
+
       </div>
     </div>
   );

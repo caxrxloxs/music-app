@@ -23,7 +23,7 @@ const Player = ({
   if (!currentTrack) return null;
 
   return (
-    <div className="player">
+    <div className="player-full-width">
       <div className="track-display">
         <img
           src={currentTrack.cover}

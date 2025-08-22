@@ -1,10 +1,10 @@
 export const trackData = [
   {
     id: 1,
-    title: 'Rainy Night',
-    artist: 'Lofi Beats',
+    title: 'El mani tostado',
+    artist: 'Los mox',
     duration: '2:45',
-    cover: '/covers/rainy-night.jpg',
+    cover: 'https://i.postimg.cc/d0dgyPp0/Album-Art-Small.jpg',
   },
   {
     id: 2,

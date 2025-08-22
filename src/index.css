@@ -13,6 +13,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -29,6 +31,24 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 85vh; 
+  height: 85%; 
+  width: 100%;
+}
+
 
 h1 {
   font-size: 3.2em;
@@ -53,6 +73,8 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+
 
 @media (prefers-color-scheme: light) {
   :root {
